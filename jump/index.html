@@ -12,7 +12,7 @@
 		
 		<p id="loading">加载中，请稍候。。。</p>
 		
-		<div id="container" style="width: 100%;height: 100%;display: none;flex-direction: column;align-items: center;">
+		<div id="container" style="display: none;">
 			<div style="width: 95%;display: flex;flex-direction: row-reverse;">
 				<img src="./ysj.png" style="object-fit: cover;width: 50%;">
 			</div>
@@ -40,7 +40,7 @@
 			
 			if(getUA()===UA_WECHAT){
 				document.getElementById("loading").style="display: none;"
-				document.getElementById("container").style="display: flex;"
+				document.getElementById("container").style="width: 100%;height: 100%;display: flex;flex-direction: column;align-items: center;"
 			}else{
 				window.location.href="https://linlin7.sc2yun.com/";
 			}
