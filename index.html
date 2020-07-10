@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> 主页 </title>
-  </head>
-  <body>
-    <h1>Hello Html!</h1>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JUMP</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			const UA_WECHAT="wechat";
+			const UA_QQ="qq";
+			const UA_ALIPAY="alipay";
+			
+			function getUA() {
+			    var ua = navigator.userAgent.toLowerCase();
+			    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			        return UA_WECHAT;
+			    } else if (ua.match(/QQ/i) == "qq") {
+			        return UA_QQ;
+			    } else if (ua.match(/Alipay/i) == "alipay" && payway == 2) {
+			        return UA_ALIPAY;
+			    }
+			    return ua;
+			}
+			
+			
+			document.write("<p>"+getUA()+"</p>");
+			
+			
+		</script>
+		
+		
+		
+		
+	</body>
 </html>
